@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Header } from './Components/Header/Header'
+import {
+	BrowserRouter as Router,
+	Route,
+} from "react-router-dom"
+import { Tasks } from "./Components/Pages/Tasks/Tasks"
+import { Archive } from "./Components/Pages/Archive"
+import { Clients } from "./Components/Pages/Clients"
+import { KnowledgeBase } from "./Components/Pages/KnowledgeBase"
+import { Staff } from "./Components/Pages/Staff"
+import { Settings } from "./Components/Pages/Settings"
+import { Main } from "./Components/Pages/Main";
+import { StateContext } from "./Context/StateContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App: React.FC = () => {
+
+
+	return (
+		<StateContext>
+			<Router>
+				<Header/>
+				<div className="content">
+					<Route exact path="/" component={ Main }/>
+					<Route path="/tasks" component={ Tasks }/>
+					<Route path="/archive" component={ Archive }/>
+					<Route path="/clients" component={ Clients }/>
+					<Route path="/base" component={ KnowledgeBase }/>
+					<Route path="/settings" component={ Settings }/>
+					<Route path="/staff" component={ Staff }/>
+				</div>
+			</Router>
+		</StateContext>
+	)
 }
 
-export default App;
+export default App

@@ -1,0 +1,79 @@
+/*sidebar*/
+.sidebarWrapper {
+	display: flex;
+	justify-content: center;
+	width: 95px;
+	position: fixed;
+	height: 100%;
+	font-size: 12px;
+	background: #002137;
+	z-index: 100;
+}
+
+.sidebarContainer {
+	margin-top: 16px;
+	display: inline-block;
+}
+
+.logo {
+	padding-left: 26px;
+}
+
+.toggleContainer {
+	margin-top: 19px;
+}
+
+.toggleContainer a {
+	display: inline-flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	color: white !important;
+	text-decoration: none
+}
+
+.toggleContainer a:hover, .activeLink {
+	background: #002c49;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.toggleContainer span {
+	display: block;
+	margin-top: 8px;
+}
+/*sidebar*/
+
+
+/*head*/
+.headWrapper {
+	display: flex;
+	position: fixed;
+	padding-left: 95px;
+	height: 65px;
+	width: 100%;
+	background: #d1e0ed;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+	z-index: 99;
+}
+
+.inputContainer {
+	display: flex;
+	width: 680px;
+	height: 40px;
+	margin: 15px 0 10px 17px;
+	padding: 11px 10px 13px 10px;
+	border: 1px solid #42aaff;
+	box-shadow: 0 0 7px 0 rgba(0, 140, 240, 0.15), inset -1px 0 7px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	background-color: white;
+}
+
+.inputContainer input {
+	width: 100%;
+}
+
+.inputContainer img {
+}
+/*head*/
