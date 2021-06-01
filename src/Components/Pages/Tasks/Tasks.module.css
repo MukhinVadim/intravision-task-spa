@@ -1,3 +1,13 @@
+.wrapper {
+	display: flex;
+	height: calc(100vh - 65px);
+}
+
+.leftCol {
+	width: 100%;
+	overflow: auto;
+}
+
 .btn {
 	width: 180px;
 	height: 40px;
@@ -15,11 +25,10 @@
 
 .tableContainer {
 	padding: 4px 0 0 3px;
-	overflow-x: auto;
 }
 
 .table {
-	width: 100%;
+	width: calc(100vw - 115px);
 	margin-top: 15px;
 	text-align: left;
 	border-collapse: collapse;
@@ -40,9 +49,26 @@
 	border-right: 1px solid #e2e7ea ;
 }
 
-.table th:last-child div {
-	border: none;
+.table th:nth-child(1) {
+	width: 35px;
 }
+
+.table th:nth-child(2) {
+	width: 80px;
+}
+
+.table th:nth-child(3) {
+	width: 420px;
+}
+
+.table th:nth-child(4) {
+	width: 125px;
+}
+
+.table th:last-child div {
+	border-right: none;
+}
+
 
 .table td {
 	padding-left: 16px;

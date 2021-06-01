@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
-import styles from "./EditTask.module.css"
+import styles from "../EditTask.module.css"
 import Moment from "react-moment"
 import "moment/locale/ru"
-import { Context } from "../../../../Context/Context";
+import { Context } from "../../../../../Context/Context";
 
 
 export const Comments: React.FC = () => {
@@ -12,7 +12,7 @@ export const Comments: React.FC = () => {
 	return (
 		<>
 			{ state.task.lifetimeItems.map((comment: any) =>
-			comment.comment ? <div className={ styles.commentContainer } key={comment.id}>
+				!/^\s*$/.test(comment.comment) && comment.comment ? <div className={ styles.commentContainer } key={comment.id}>
 				<div className={ styles.ava }>
 					<div/>
 				</div>

@@ -7,7 +7,7 @@ import {
 	IS_EDIT,
 	SET_STATUSES,
 	SET_PRIORITIES,
-	SET_STATUS, SET_USERS
+	SET_USERS,
 } from "../Context/ActionTypes";
 
 
@@ -19,8 +19,11 @@ export const reducer = (state: State, action: Action) => {
 		case SET_TASK: {
 			return {...state, task: action.payload}
 		}
-		case SET_STATUS: {
-			return {...state, status: action.payload}
+		case IS_EDIT: {
+			return {
+				...state,
+				isEdit: action.payload,
+			}
 		}
 		case ADD_TASK: {
 			return {
@@ -39,12 +42,7 @@ export const reducer = (state: State, action: Action) => {
 				isAdd: action.payload
 			}
 		}
-		case IS_EDIT: {
-			return {
-				...state,
-					isEdit: action.payload,
-			}
-		}
+
 		case SET_STATUSES: {
 			return {
 				...state,

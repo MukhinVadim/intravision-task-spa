@@ -1,15 +1,13 @@
 .wrapper {
-	position: fixed;
-	top: 65px;
-	right: 0;
 	width: 975px;
-	height: calc(100% - 65px);
-	z-index: 4;
+	height: 100%;
 	background-color: #ecf3f7;
 	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
+	z-index: 4;
 	overflow-y: auto;
 }
+
 .wrapper::-webkit-scrollbar {
 	display: none;
 }

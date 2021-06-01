@@ -33,19 +33,12 @@ export const tasksAPI = {
 		)
 	},
 	editTask(id: number, statusId: number, priorityId: number, executorId: number, comment: string) {
-		console.log(comment.length)
-		return instance.put(`Tasks`,
-			comment.length === 0 ? {
+		return instance.put(`Tasks`, {
 				"id": id,
 				"statusId": statusId,
 				"executorId": executorId,
-				"priorityId": priorityId
-			} : {
-				"id": id,
-				"statusId": statusId,
-				"executorId": executorId,
-				"comment": comment,
-				"priorityId": priorityId
+				"priorityId": priorityId,
+				"comment": comment
 			}
 		)
 	},
