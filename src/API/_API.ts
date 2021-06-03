@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Tasks } from "../types";
+// import { Tasks } from "../types";
 
 const tenantguid = 'ce21af0a-82f2-4b2f-8fa5-0f64ab516eea'
 
@@ -10,7 +10,7 @@ const instance = axios.create({
 
 export const tasksAPI = {
 	getTasks() {
-		return axios.get<Tasks>(`http://intravision-task.test01.intravision.ru/odata/tasks?tenantguid=${ tenantguid }`)
+		return axios.get(`http://intravision-task.test01.intravision.ru/odata/tasks?tenantguid=${ tenantguid }`)
 	},
 	getTask(id: number) {
 		return instance.get(`Tasks/${ id }`)
